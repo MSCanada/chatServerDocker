@@ -1,0 +1,13 @@
+web:
+  build: .
+  environment:
+    ENV: DEV 
+  volumes:
+    - "./app:/src/app"
+  ports:
+    - "8081:6789"
+  links:
+    - "db:redis"
+
+db:
+  image: redis

@@ -1,0 +1,25 @@
+//
+   Created by Muhammad Suhail on 7/10/2016.
+extends layout
+block content
+    div#wrapper
+        div#menu
+
+            p.welcome Welcome
+            p#roomName
+            p.logout
+                a(href="/logout") Logout
+            div(style="clear:both")
+
+
+
+
+        div#chatbox
+
+
+        form(name="message",action="",method="post")
+             input(name="username",type="text",id="text",size="63")
+             input(type="button" ,value="Send",onclick="send()")
+
+        script(src="/socket.io/socket.io.js")
+        script(src="/javascripts/chatServerScript.js")

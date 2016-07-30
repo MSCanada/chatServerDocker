@@ -1,0 +1,26 @@
+extends layout
+block content
+  div.bodySection
+    div.leftItem
+      h3 Select Room
+      select(id="room_list", name="roomsList")
+         each item in rooms
+            option(value="#{item}")  #{item}
+      br
+      br
+      input(type='button',value='Enter Room',onclick="enterRoom()")
+
+     div.rightItem
+      h3 Create New Room
+      input(type="text",id="newRoom",placeholder="ENter Room Name")
+      br
+      br
+      input(type='button',value='Create new Room',onclick="createRoom()")
+
+      br
+      input(type="text",id="text",placeholder="ENter text to send")
+      input(type='button',value='send',onclick="send()")
+
+
+      script(src="/socket.io/socket.io.js")
+      script(src="/javascripts/chatServerScript.js")
