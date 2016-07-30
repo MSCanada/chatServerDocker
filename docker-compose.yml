@@ -1,7 +1,7 @@
 web:
   build: .
   environment:
-    ENV: UNIT 
+    ENV: PROD 
   volumes:
     - "./app:/src/app"
   ports:
